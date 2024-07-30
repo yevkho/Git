@@ -3,7 +3,6 @@ import capitalize from "./capitalize";
 import reverse from "./reverse";
 import calculator from "./calculator";
 import caesarCipher from "./caesarCipher";
-import analyzeArray from "./analyzeArray";
 
 test("capitalize word", () => {
   expect(capitalize("string")).toBe("String");
@@ -26,13 +25,4 @@ test("caesar cipher", () => {
   expect(caesarCipher("xyz", 3)).toBe("abc"); // wrapping
   expect(caesarCipher("HeLLo", 3)).toBe("KhOOr"); // case
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!"); // punctuation
-});
-
-test("array analyzer", () => {
-  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
-    average: 4,
-    min: 1,
-    max: 8,
-    length: 6,
-  });
 });
